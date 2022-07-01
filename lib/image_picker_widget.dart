@@ -585,7 +585,7 @@ class _MyImagePickerState extends State<_MyImagePicker> {
 
   void _crop() async {
     if (currentImage == null) return;
-    final cropedFie = await CustomMultiImagepicker2.imageCropper.cropImage(
+    final cropedFie = await ImageCropper().cropImage(
       sourcePath: currentImage!.path,
       aspectRatio: widget.aspectRatio,
       aspectRatioPresets: widget.aspectRatioPresets,
