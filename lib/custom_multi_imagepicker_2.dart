@@ -275,7 +275,7 @@ class CustomMultiImagepicker2 {
           if (oldImages.any((oi) => oi.id == i.id && oi.icCropped))
             i._icCropped = true; // ._crop(i.file);
           else {
-            final file = await imageCropper.cropImage(
+            final file = await imageCropper().cropImage(
               sourcePath: i.path,
               aspectRatio: croperAspectRatio,
               aspectRatioPresets: croperAspectRatioPresets,
